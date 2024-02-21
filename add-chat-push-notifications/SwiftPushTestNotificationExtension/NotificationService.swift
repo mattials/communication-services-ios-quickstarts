@@ -50,7 +50,8 @@ class NotificationService: UNNotificationServiceExtension {
                     // Customize the content
                     let messageBody = chatMessageReceivedEvent.message
                     bestAttemptContent.body = messageBody
-                    
+
+                    contentHandler(bestAttemptContent)
                     default:
                     bestAttemptContent.title = "New Message"
                     bestAttemptContent.body = "Please tap here to see the message."
